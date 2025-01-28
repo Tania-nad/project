@@ -1,0 +1,25 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f6ddcc;
+    &__logo{
+        width: 50px;
+        border-radius: 10px;
+        background-color: #f6ddcc;
+        cursor: pointer;
+    }
+ 
+}
+.flags{
+    padding: 5px;
+    justify-content: space-between;
+}
+.Spain{
+    width: 40px;
+    height: 30px;
+}
+.England{
+    width: 40px;
+    height: 30px;
+}

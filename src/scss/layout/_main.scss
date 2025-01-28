@@ -1,0 +1,24 @@
+.main{
+    background: #f6ddcc;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+    color: #34495e ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    font-size: x-large;
+    margin-top: 80px;
+}
+.photo{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 50px;
+}
