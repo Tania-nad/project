@@ -1,4 +1,4 @@
-function Menu(props) {
+function Menu() {
   return (
     <>
       <nav>

@@ -1,11 +1,9 @@
-import Menu from "./Menu";
+import PropTypes from "prop-types";
 import burguer from "../images/transparent-menu.jpg";
 import spainFlag from "../images/Spain2.jpg";
 import englandFlag from "../images/England.jpg";
 import "../scss/layout/_header.scss";
 import "../scss/core/_variables.scss";
-
-import PropTypes from "prop-types";
 
 /*
   Cuando la usuaria haga click en la imagen:
@@ -20,15 +18,23 @@ function Header(props) {
 
   return (
     <header className="header">
-      <div>
+      {/* <div>
         <img
           className="header__logo"
           src={burguer}
           alt="menu"
           onClick={handleClick}
         />
-        <h5>{props.menuInput}</h5>
-      </div>
+      </div> */}
+
+      <ul className="list">
+        <div className="list-items">
+          <li className="list-elements">Sobre mi</li>
+          <li className="list-elements">Proyectos</li>
+          <li className="list-elements">Habilidades</li>
+          <li className="list-elements">¿Más info?</li>
+        </div>
+      </ul>
 
       <div className="flags">
         <img className="Spain" src={spainFlag} alt="Spain" />
@@ -37,5 +43,9 @@ function Header(props) {
     </header>
   );
 }
+Header.propTypes = {
+  onClickInput: PropTypes.func.isRequired,
+  menuInput: PropTypes.string.isRequired,
+};
 
 export default Header;

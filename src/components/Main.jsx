@@ -9,7 +9,9 @@ function Main() {
         <h3>Web Developer</h3>
       </section>
       <section>
-        <img className="photo" src={photo} alt="author" />
+        <div className="photo-container">
+          <img className="photo" src={photo} alt="author" />
+        </div>
       </section>
     </div>
   );
