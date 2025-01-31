@@ -5,16 +5,23 @@ import Footer from "./Footer";
 import { useState } from "react";
 
 function App() {
-  const [menu, setMenu] = useState("");
+  const [menuVisible, setMenuVisible] = useState(false);
 
   const handleClickInput = (valueInput) => {
     console.log(valueInput);
     setMenu(valueInput);
   };
+  const toggleMenu = () => {
+    setMenuVisible(!menuVisible);
+  };
 
   return (
     <>
-      <Header onClickInput={handleClickInput} menuInput={menu} />
+      <Header
+        onClickInput={handleClickInput}
+        menuVisible={menuVisible}
+        toggleMenu={toggleMenu}
+      />
       <Main />
       <Footer />
     </>

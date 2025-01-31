@@ -1,7 +1,5 @@
 import PropTypes from "prop-types";
-import burguer from "../images/transparent-menu.jpg";
-import spainFlag from "../images/Spain2.jpg";
-import englandFlag from "../images/England.jpg";
+import dropDown from "../images/drop-down.png";
 import "../scss/layout/_header.scss";
 import "../scss/core/_variables.scss";
 
@@ -10,23 +8,11 @@ import "../scss/core/_variables.scss";
     muestro el menú desplegable
 */
 
-function Header(props) {
+function Header({ menuVisible, toggleMenu }) {
   //código de JS puro
-  const handleClick = () => {
-    props.onClickInput("Menú completo");
-  };
 
   return (
     <header className="header">
-      {/* <div>
-        <img
-          className="header__logo"
-          src={burguer}
-          alt="menu"
-          onClick={handleClick}
-        />
-      </div> */}
-
       <ul className="list">
         <div className="list-items">
           <li className="list-elements">Sobre mi</li>
@@ -37,8 +23,22 @@ function Header(props) {
       </ul>
 
       <div className="flags">
-        <img className="Spain" src={spainFlag} alt="Spain" />
-        <img className="England" src={englandFlag} alt="England" />
+        {/* <img className="Spain" src={spainFlag} alt="Spain" />
+        <img className="England" src={englandFlag} alt="England" /> */}
+        <p className="language">ES</p>
+
+        <img
+          className="symbol"
+          src={dropDown}
+          alt="drop-down"
+          onClick={toggleMenu}
+        />
+        {menuVisible && (
+          <ul className="lang-list">
+            <li>EN</li>
+            <li>ES</li>
+          </ul>
+        )}
       </div>
     </header>
   );

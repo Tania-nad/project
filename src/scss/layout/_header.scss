@@ -14,11 +14,31 @@
 .flags{
     padding: 5px;
     justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-right: 200px;
 }
-.Spain{
+.symbol:hover{
     width: 40px;
     height: 30px;
+    cursor: pointer;
+    transition: ease-in-out;
+    position: relative; 
+    display: inline-block;
 }
+.lang-list li:hover{
+    display: block;
+    position: absolute;
+    z-index: 1;    
+}
+.language{
+    font-size: large;
+    font-family: 'Roboto', arial, sans-serif;
+    color: grey;
+}
+
 .England{
     width: 40px;
     height: 30px;
@@ -29,7 +49,7 @@
     padding: 20px;
     justify-content: space-between;
     align-items: flex-start;
-    margin-right: 300px;
+    margin-right: 250px;
     
     
 }
@@ -40,7 +60,8 @@
     justify-content: space-between;
     align-items: center;
     gap: 50px;
-    font-size: x-large;
+    font-size: large;
+    font-family: 'Roboto', arial, sans-serif;
     color: grey;
     transform: scale(1.1); /* Aumenta el tamaño un 10% */
     transition: transform 0.2s ease-in-out;
