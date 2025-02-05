@@ -1,5 +1,6 @@
 import "../scss/layout/_main.scss";
-import photo from "../images/PHOTO.jpg";
+
+import Gallery from "./Gallery";
 
 function Main() {
   return (
@@ -9,8 +10,8 @@ function Main() {
         <h3>Web Developer</h3>
       </section>
       <section>
-        <div className="photo-container">
-          <img className="photo" src={photo} alt="author" />
+        <div>
+          <Gallery />
         </div>
       </section>
     </div>

@@ -9,7 +9,6 @@ function App() {
 
   const handleClickInput = (valueInput) => {
     console.log(valueInput);
-    setMenu(valueInput);
   };
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
