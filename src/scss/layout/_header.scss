@@ -21,10 +21,15 @@
     margin-right: 250px;
 }
 .symbol{
-    width: 40px;
-    height: 30px;
+    width: 20px;
+    height: 25px;
     cursor: pointer;
-
+    border: 5px;
+    color: grey;
+}
+.symbol:hover{
+    transform: scale(1.1); 
+    transition: transform 0.2s ease-in-out;
 }
 .lang-list {
     display: block;
@@ -37,11 +42,21 @@
     left: 0;
     cursor: pointer;     
 }
+.lang-list:hover{
+    transform: scale(1.1); 
+    transition: transform 0.2s ease-in-out;
+}
 .language{
     font-size: large;
     font-family: 'Roboto', arial, sans-serif;
     color: grey;
     margin-left: 700px;
+    cursor: pointer;
+}
+.language:hover{
+    transform: scale(1.1); 
+    transition: transform 0.2s ease-in-out;
+    
 }
 
 .England{
@@ -57,6 +72,8 @@
     
     
     
+    
+    
 }
 .list-items{
     display: flex;
@@ -65,7 +82,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 50px;
-    font-size: large;
+    font-size: medium;
     font-family: 'Roboto', arial, sans-serif;
     color: grey;
     transform: scale(1.1); /* Aumenta el tamaño un 10% */

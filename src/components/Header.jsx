@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import dropDown from "../images/drop-down.png";
+import arrow from "../images/arrow.png";
 import "../scss/layout/_header.scss";
 import "../scss/core/_variables.scss";
 
@@ -25,10 +25,12 @@ function Header({ menuVisible, toggleMenu }) {
       <div className="flags">
         {/* <img className="Spain" src={spainFlag} alt="Spain" />
         <img className="England" src={englandFlag} alt="England" /> */}
-        <p className="language">ES</p>
+        <p className="language" onClick={toggleMenu}>
+          ES
+        </p>
         <img
           className="symbol"
-          src={dropDown}
+          src={arrow}
           alt="drop-down"
           onClick={toggleMenu}
         />
