@@ -3,9 +3,12 @@ import Gallery from "./Gallery";
 import Projects from "./Projects";
 import PropTypes from "prop-types";
 
-function Main() {
+function Main({ text }) {
   return (
     <div className="main">
+      <section className="Hi">
+        <h1>{text}</h1>
+      </section>
       <section>
         <Gallery />
       </section>
@@ -117,8 +120,7 @@ function Main() {
 }
 
 Main.propTypes = {
-  onMouseOver: PropTypes.func.isRequired, // onMouseOver debe ser una función y es requerida
-  onMouseOut: PropTypes.func.isRequired, // onMouseOut debe ser una función y es requerida
+  text: PropTypes.string.isRequired, // text debe ser un string y es obligatorio
 };
 
 export default Main;

@@ -2,11 +2,13 @@ import "../scss/App.scss";
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [menuVisible, setMenuVisible] = useState(false);
-  const [message, setMessage] = useState("");
+  const [text, setText] = useState("");
+  const [index, setIndex] = useState(0);
+  const fullText = "Hi there! Soy Tania, fullstack developer.";
 
   const handleClickInput = (valueInput) => {
     console.log(valueInput);
@@ -14,13 +16,17 @@ function App() {
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
   };
-  const handleMouseEnter = () => {
-    setMessage("¡Has pasado el ratón sobre la palabra!");
-  };
-  const handleMouseLeave = () => {
-    setMessage("");
-  };
 
+  useEffect(() => {
+    if (index < fullText.length) {
+      const interval = setInterval(() => {
+        setText((prevText) => prevText + fullText[index]); // Agregar una letra al texto
+        setIndex((prevIndex) => prevIndex + 1); // Incrementar el índice
+      }, 50); // Velocidad de la animación en milisegundos
+
+      return () => clearInterval(interval); // Limpiar el intervalo cuando el componente se desmonte
+    }
+  }, [index]); // Este efecto se ejecuta cada vez que el índice cambia
   return (
     <>
       <Header
@@ -29,8 +35,8 @@ function App() {
         toggleMenu={toggleMenu}
       />
 
-      <Main onMouseOver={handleMouseEnter} onMouseOut={handleMouseLeave} />
-      {message && <p>{message}</p>}
+      <Main text={text} />
+
       <Footer />
     </>
   );

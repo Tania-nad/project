@@ -2,7 +2,11 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-color: #f6ddcc;
+    background-color: #b0bec5;
+    height: 100px;
+    border: 1px solid #ccc; /* Borde gris claro */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05); /* Sombra más difusa y suave */
+  padding: 15px;
     &__logo{
         width: 50px;
         border-radius: 10px;
@@ -68,11 +72,10 @@
     flex-direction: row;
     padding: 20px;
     justify-content: space-between;
-    align-items: flex-start;
-    
-    
-    
-    
+    align-items: flex-start;  
+    align-self: center; 
+    width: 100%;
+    vertical-align: initial;
     
 }
 .list-items{
@@ -82,6 +85,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 50px;
+    
     font-size: medium;
     font-family: 'Roboto', arial, sans-serif;
     color: grey;
