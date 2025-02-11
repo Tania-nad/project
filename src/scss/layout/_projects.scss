@@ -11,6 +11,7 @@
 .container-image{
     width: 400px;
     height: 200px;
+    box-shadow: 5px 5px 10px grey;
     
     
 }
@@ -38,6 +39,17 @@
     justify-content: center; /* Centra los elementos horizontalmente */
     gap: 20px;
     
+  }
+
+  @media (max-width: 768px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .second-row{
+        display: flex;
+        flex-direction: column;
+    }
   }
 
 

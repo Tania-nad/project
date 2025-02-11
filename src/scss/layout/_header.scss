@@ -99,3 +99,40 @@
     transition: transform 0.1s ease-in-out, color 0.2s ease-in-out;
     cursor: pointer;
 }
+.burguer{
+    border-radius: 35px;
+    display: none;
+}
+.visible-language{
+    font-family: 'Roboto', arial, sans-serif;
+    color: grey;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    display: none;
+    font-size: large;
+}
+.visible-language:hover{
+    transform: scale(1.1);
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8); ;
+}
+
+
+@media (max-width: 768px) {
+    .burguer{
+        display: flex;
+    }
+    .list{
+        display: none;
+    }
+    .visible-language{
+        display: flex;
+    }
+   
+    
+   
+}

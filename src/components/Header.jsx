@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import arrow from "../images/arrow.png";
+import burguer from "../images/circle.png";
 import "../scss/layout/_header.scss";
 import "../scss/core/_variables.scss";
 
@@ -13,6 +14,8 @@ function Header({ menuVisible, toggleMenu }) {
 
   return (
     <header className="header">
+      <img className="burguer" src={burguer} alt="burguer-menu" />
+      <h1 className="visible-language">EN/ES</h1>
       <ul className="list">
         <div className="list-items">
           <li className="list-elements">Sobre mi</li>
@@ -25,6 +28,7 @@ function Header({ menuVisible, toggleMenu }) {
       <div className="flags">
         {/* <img className="Spain" src={spainFlag} alt="Spain" />
         <img className="England" src={englandFlag} alt="England" /> */}
+
         <p className="language" onClick={toggleMenu}>
           ES
         </p>
@@ -34,6 +38,7 @@ function Header({ menuVisible, toggleMenu }) {
           alt="drop-down"
           onClick={toggleMenu}
         />
+
         {menuVisible && (
           <ul className="lang-list">
             <li className="lang-list">EN</li>
