@@ -8,6 +8,25 @@ function App() {
   const [menuVisible, setMenuVisible] = useState(false);
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    title: "",
+    message: "",
+  });
+  const handleChangeName = (value) => {
+    setForm({ ...form, name: value });
+  };
+  const handleChangeEmail = (value) => {
+    setForm({ ...form, email: value });
+  };
+  const handleChangeTitle = (value) => {
+    setForm({ ...form, title: value });
+  };
+  const handleChangeMessage = (value) => {
+    setForm({ ...form, message: value });
+  };
+
   const fullText = "Hi there! Soy Tania, fullstack developer.";
 
   const handleClickInput = (valueInput) => {
@@ -35,7 +54,13 @@ function App() {
         toggleMenu={toggleMenu}
       />
 
-      <Main text={text} />
+      <Main
+        text={text}
+        onChangeName={handleChangeName}
+        onChangeEmail={handleChangeEmail}
+        onChangeTitle={handleChangeTitle}
+        onChangeMessage={handleChangeMessage}
+      />
 
       <Footer />
     </>

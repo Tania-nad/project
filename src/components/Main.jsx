@@ -3,7 +3,29 @@ import Gallery from "./Gallery";
 import Projects from "./Projects";
 import PropTypes from "prop-types";
 
-function Main({ text }) {
+function Main({
+  text,
+  onChangeName,
+  onChangeEmail,
+  onChangeTitle,
+  onChangeMessage,
+}) {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("Formulario enviado sin recarga de página");
+  };
+  const handleChangeName = (ev) => {
+    onChangeName(ev.target.value);
+  };
+  const handleChangeEmail = (ev) => {
+    onChangeEmail(ev.target.value);
+  };
+  const handleChangeTitle = (ev) => {
+    onChangeTitle(ev.target.value);
+  };
+  const handleChangeMessage = (ev) => {
+    onChangeMessage(ev.target.value);
+  };
   return (
     <div className="main">
       <section className="Hi">
@@ -12,7 +34,7 @@ function Main({ text }) {
       <section>
         <Gallery />
       </section>
-      <section className="about-me">
+      <section id="sobre-mi" className="about-me">
         <h1 className="about-me-title">¿Quién soy?</h1>
         <p className="about-me-parag">
           He tenido la oportunidad de explorar un campo completamente diferente
@@ -32,10 +54,10 @@ function Main({ text }) {
           expandir mi creatividad. Además... 📚 🍝 y 🎞️ como forma de vida.
         </p>
       </section>
-      <section>
+      <section id="proyectos">
         <Projects />
       </section>
-      <section className="skills">
+      <section id="habilidades" className="skills">
         <h1 className="skills-title">Habilidades</h1>
         <p className="skills-paragraph">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa
@@ -107,20 +129,59 @@ function Main({ text }) {
           </a>
         </div>
       </section>
-      <section className="info">
+      <section id="mas-info" className="info">
         <h1 className="info-title">Conéctate conmigo</h1>
-        <p className="info-paragraph">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias a eius
-          voluptatum nemo quam error unde nam iure ipsa. Vel consequuntur eius
-          rem ab nemo numquam incidunt. Magni, voluptatum labore.
+        <p className="questions">
+          ¿Tienes preguntas? No dudes en escribirme un mensaje rellenando el
+          siguiente formulario:
         </p>
+        <form className="form">
+          <label htmlFor="name">Nombre completo</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            onChange={handleChangeName}
+          />
+          <label htmlFor="email">Tu email</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            onChange={handleChangeEmail}
+          />
+          <label htmlFor="title">Asunto</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            onChange={handleChangeTitle}
+          />
+          <label htmlFor="message">Mensaje</label>
+          <textarea
+            className="textArea"
+            name="message"
+            id="message"
+            rows="4"
+            cols="50"
+            placeholder="Write your message here"
+            onChange={handleChangeMessage}
+          ></textarea>
+          <button type="submit" onClick={handleSubmit} className="button">
+            Submit
+          </button>
+        </form>
       </section>
     </div>
   );
 }
 
 Main.propTypes = {
-  text: PropTypes.string.isRequired, // text debe ser un string y es obligatorio
+  text: PropTypes.string.isRequired,
+  onChangeName: PropTypes.func.isRequired,
+  onChangeEmail: PropTypes.func.isRequired,
+  onChangeTitle: PropTypes.func.isRequired,
+  onChangeMessage: PropTypes.func.isRequired,
 };
 
 export default Main;

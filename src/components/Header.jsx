@@ -18,10 +18,18 @@ function Header({ menuVisible, toggleMenu }) {
       <h1 className="visible-language">EN/ES</h1>
       <ul className="list">
         <div className="list-items">
-          <li className="list-elements">Sobre mi</li>
-          <li className="list-elements">Proyectos</li>
-          <li className="list-elements">Habilidades</li>
-          <li className="list-elements">¿Más info?</li>
+          <a href="#sobre-mi">
+            <li className="list-elements">Sobre mi</li>
+          </a>
+          <a href="#proyectos">
+            <li className="list-elements">Proyectos</li>
+          </a>
+          <a href="#habilidades">
+            <li className="list-elements">Habilidades</li>
+          </a>
+          <a href="#mas-info">
+            <li className="list-elements">¿Más info?</li>
+          </a>
         </div>
       </ul>
 
