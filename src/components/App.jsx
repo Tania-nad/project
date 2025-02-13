@@ -14,6 +14,12 @@ function App() {
     title: "",
     message: "",
   });
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenuBurguer = () => {
+    setIsOpen(!isOpen); // Cambiar el estado de isOpen
+  };
+
   const handleChangeName = (value) => {
     setForm({ ...form, name: value });
   };
@@ -52,6 +58,8 @@ function App() {
         onClickInput={handleClickInput}
         menuVisible={menuVisible}
         toggleMenu={toggleMenu}
+        isOpen={isOpen}
+        toggleMenuBurguer={toggleMenuBurguer}
       />
 
       <Main
