@@ -14,6 +14,7 @@ function App() {
     title: "",
     message: "",
   });
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenuBurguer = () => {
@@ -52,6 +53,7 @@ function App() {
       return () => clearInterval(interval); // Limpiar el intervalo cuando el componente se desmonte
     }
   }, [index]); // Este efecto se ejecuta cada vez que el índice cambia
+
   return (
     <>
       <Header

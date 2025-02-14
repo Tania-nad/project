@@ -132,9 +132,40 @@ function Main({
       <section id="mas-info" className="info">
         <h1 className="info-title">Conéctate conmigo</h1>
         <p className="questions">
-          ¿Tienes preguntas? No dudes en escribirme un mensaje rellenando el
-          siguiente formulario:
+          ¿Tienes preguntas? No dudes en contactar conmigo. Puedes encontrarme
+          aquí:
         </p>
+        <div className="personal-info">
+          <p className="location">
+            <i className="fas fa-location-dot"></i>
+            Córdoba,Spain
+          </p>
+          <p className="email-dot">
+            <i className="fa-regular fa-envelope"></i>
+            nadsanp@gmail.com
+          </p>
+          <p className="linkedin-dot">
+            <i className="fa-brands fa-linkedin-in"></i>
+            <a
+              href="https://www.linkedin.com/in/tania-nadales-704208302/"
+              target="blank"
+              className="linkedin"
+            >
+              www.linkedin.com/in/tania-nadales
+            </a>
+          </p>
+          <p className="github-dot">
+            <i className="fa-brands fa-github"></i>
+            <a
+              href="https://github.com/Tania-nad"
+              target="blank"
+              className="github"
+            >
+              www.github.com/Tania-nad
+            </a>
+          </p>
+        </div>
+
         <form className="form">
           <label htmlFor="name">Nombre completo</label>
           <input

@@ -8,11 +8,11 @@ import Apple from "../images/apple.jpg";
 function Gallery() {
   return (
     <section className="section">
-      <img src={Me} alt="developer" />
-      <img src={Scrum} alt="scrum" />
-      <img src={Turron} alt="dog" />
-      <img src={Veleta} alt="mountain" />
-      <img src={Apple} alt="computer" />
+      <img className="gallery-image" src={Me} alt="developer" />
+      <img className="gallery-image" src={Scrum} alt="scrum" />
+      <img className="gallery-image" src={Turron} alt="dog" />
+      <img className="gallery-image" src={Veleta} alt="mountain" />
+      <img className="gallery-image" src={Apple} alt="computer" />
     </section>
   );
 }

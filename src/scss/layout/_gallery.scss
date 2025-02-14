@@ -5,7 +5,7 @@
   height: 430px;
   margin-top: 50px;
 }
-section img{
+.gallery-image{
   width: 0px;
   flex-grow: 1;
   object-fit: cover;
@@ -13,7 +13,7 @@ section img{
   transition: .5s ease;
   
 }
-section img:hover{
+.gallery-image:hover{
   cursor: crosshair;
   width: 300px;
   opacity: 1;

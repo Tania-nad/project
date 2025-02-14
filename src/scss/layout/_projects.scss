@@ -12,8 +12,18 @@
     width: 400px;
     height: 200px;
     box-shadow: 5px 5px 10px grey;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
     
     
+}
+.container-image:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
 }
 .project-title{
     display: flex;
