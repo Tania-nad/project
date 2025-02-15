@@ -4,8 +4,10 @@
     padding: 20px;
     background-image: url(/src/images/backgroundPicture5.jpg);
     height: 100px;
+    position: fixed;
+    z-index: 1000;
     
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05); /* Sombra más difusa y suave */
+    //box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05); /* Sombra más difusa y suave */
     padding: 15px;
     &__logo{
         width: 50px;

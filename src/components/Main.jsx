@@ -9,6 +9,8 @@ function Main({
   onChangeEmail,
   onChangeTitle,
   onChangeMessage,
+  showScrollToTop,
+  scrollToTop,
 }) {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -202,10 +204,36 @@ function Main({
             Submit
           </button>
         </form>
+        {showScrollToTop && (
+          <button
+            style={buttonStyle}
+            onClick={scrollToTop}
+            aria-label="Volver arriba"
+          >
+            <i className="fa fa-arrow-up"></i> {/* Ícono de FontAwesome */}
+          </button>
+        )}
       </section>
     </div>
   );
 }
+const buttonStyle = {
+  position: "fixed",
+  bottom: "20px",
+  right: "20px",
+  backgroundColor: "#fc0dac",
+  color: "white",
+  padding: "10px",
+  borderRadius: "50%",
+  fontSize: "24px",
+  cursor: "pointer",
+  zIndex: "1000",
+  border: "none",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  transition: "opacity 0.5s ease",
+};
 
 Main.propTypes = {
   text: PropTypes.string.isRequired,
@@ -213,6 +241,8 @@ Main.propTypes = {
   onChangeEmail: PropTypes.func.isRequired,
   onChangeTitle: PropTypes.func.isRequired,
   onChangeMessage: PropTypes.func.isRequired,
+  showScrollToTop: PropTypes.func.isRequired,
+  scrollToTop: PropTypes.func.isRequired,
 };
 
 export default Main;

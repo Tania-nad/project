@@ -14,6 +14,29 @@ function App() {
     title: "",
     message: "",
   });
+  //botón de scroll hacia arriba
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      // Lógica para detectar el scroll
+      if (window.scrollY > 100) {
+        setShowScrollToTop(true);
+      } else {
+        setShowScrollToTop(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Esta función de retorno se ejecuta cuando el componente se desmonta o el efecto se vuelve a ejecutar
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -70,6 +93,8 @@ function App() {
         onChangeEmail={handleChangeEmail}
         onChangeTitle={handleChangeTitle}
         onChangeMessage={handleChangeMessage}
+        showScrollToTop={showScrollToTop}
+        scrollToTop={scrollToTop}
       />
 
       <Footer />
