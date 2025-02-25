@@ -1,5 +1,4 @@
 import "../scss/layout/_main.scss";
-import Gallery from "./Gallery";
 import Projects from "./Projects";
 import PropTypes from "prop-types";
 
@@ -11,6 +10,9 @@ function Main({
   onChangeMessage,
   showScrollToTop,
   scrollToTop,
+  imageUrl,
+  isFlipping,
+  showSquares,
 }) {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -34,140 +36,93 @@ function Main({
         <h1>{text}</h1>
       </section>
       <section>
-        <Gallery />
+        <img
+          src={imageUrl}
+          alt="Imagen Giratoria"
+          className={`flipping-image ${isFlipping ? "flip" : ""}`}
+        />
       </section>
+
       <section id="sobre-mi" className="about-me">
-        <h1 className="about-me-title">¿Quién soy?</h1>
+        <h1 className="about-me-title">Tania...Who?</h1>
         <p className="about-me-parag">
-          He tenido la oportunidad de explorar un campo completamente diferente
-          al que había trabajado anteriormente, y he decidido quedarme en él. Mi
-          nombre es Tania, y soy apasionada del desarrollo web y las
-          oportunidades de aprendizaje que este trae consigo. Me formé como
-          traductora, y después de vivir en tres países diferentes y
-          perfeccionar mi inglés, he pasado los últimos 10 años dedicándome a la
-          enseñanza de idiomas y a la gestión de equipos y proyectos. En busca
-          de nuevos objetivos y experiencias de aprendizaje, comencé mi
-          formación en programación web con Adalab. A través de ello, descubrí
-          un mundo lleno de posibilidades, donde la innovación es constante, la
-          tecnología mejora la vida diaria de los usuarios y puedes ser parte
-          del cambio desde adentro. Me apasiona el trabajo en equipo, crecer y
-          aprender junto a profesionales de este sector. Es por eso que busco
-          unirme a una empresa donde pueda desarrollarme profesionalmente y
-          expandir mi creatividad. Además... 📚 🍝 y 🎞️ como forma de vida.
+          Welcome to my page. My name is Tania and I am a full stack web
+          developer passionate about new learnings, challenges that may come my
+          way, and an adventurer in all aspects of life. My motto is: the harder
+          it gets, the more I push myself and obsess over achieving it (wait, is
+          that a good thing?). I didn’t get here by chance. My academic and
+          professional background is quite broad. It all started with a passion
+          for languages and different cultures, which led me not only to study
+          Translation and Interpreting (I could easily pictured myself at the UN
+          translating Kofi Annan's speeches at the age of 16), but also to leave
+          my home country to study, work, and hope for the best. In the search
+          for new challenges, I fell headfirst into the world of technology and
+          fell in love with programming and its many possibilities. I started
+          with my school, Adalab, and have continued learning and developing new
+          languages on my own. Have I kept your attention so far? Scroll down ;)
         </p>
       </section>
-      <section id="proyectos">
+      <section id="proyectos" className="projects-section">
         <Projects />
       </section>
-      <section id="habilidades" className="skills">
-        <h1 className="skills-title">Habilidades</h1>
-        <p className="skills-paragraph">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa
-          mollitia placeat dolor reprehenderit iusto earum possimus rem,
-          perspiciatis veniam eaque distinctio, totam rerum aperiam fugiat
-          architecto fugit! Tempora, id accusantium. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Molestias, sapiente. Nisi similique
-          laboriosam autem nulla perspiciatis fugit, facilis voluptatum? Nobis
-          quidem obcaecati deserunt architecto praesentium velit quisquam
-          fugiat, possimus provident!
-        </p>
-        <div className="tech">
-          <a
-            href="https://nuria8890.github.io/ADALAB-project-module-2-team-3-HastaElInfinito/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h3>JAVASCRIPT</h3>
-          </a>
-          <a
-            href="https://tania-nad.github.io/project-promo-a-module-3-team-3/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h3>REACT</h3>
-          </a>
 
-          <a
-            href="https://kendaltw.github.io/sername-project-promo-A-module-1-team-2/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h3>HTML/CSS</h3>
-          </a>
-          <a
-            href="https://kendaltw.github.io/sername-project-promo-A-module-1-team-2/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h3>SASS</h3>
-          </a>
-          <a
-            href="https://github.com/Tania-nad/Brilliant-Brains"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h3>NODE</h3>
-          </a>
-          <a
-            href="https://github.com/Tania-nad/Brilliant-Brains"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h3>EXPRESS</h3>
-          </a>
-          <a
-            href="https://github.com/Tania-nad/Brilliant-Brains"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h3>MySQL</h3>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/tania-nadales-704208302/details/skills/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h3>INGLÉS</h3>
-          </a>
-        </div>
+      <section id="habilidades" className="skills">
+        <h1 className="skills-title">Skills</h1>
+        <section id="target-section" className="target-section">
+          <div className="tech">
+            <div className={`squared-box left ${showSquares ? "show" : ""}`}>
+              <div className="tech-skills-section">
+                <h1>Technical skills</h1>
+                <ul className="tech-list">
+                  <li>
+                    <i className="fa-solid fa-circle-check"></i>HTML5
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle-check"></i>CSS3, flexbox,
+                    CSS Grid, Sass
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle-check"></i>JavaScript
+                    Vanilla
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle-check"></i>ES6, React
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle-check"></i>Node, Express
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className={`squared-box right ${showSquares ? "show" : ""}`}>
+              <div className="soft-skills-section">
+                <h1>Soft skills</h1>
+                <ul className="soft-list">
+                  <li>
+                    <i className="fa-solid fa-circle-check"></i>Languages
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle-check"></i>Cultural
+                    competence
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle-check"></i>Team management
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle-check"></i>Project
+                    management
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle-check"></i>Organization and
+                    commitment
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
       <section id="mas-info" className="info">
-        <h1 className="info-title">Conéctate conmigo</h1>
-        <p className="questions">
-          ¿Tienes preguntas? No dudes en contactar conmigo. Puedes encontrarme
-          aquí:
-        </p>
-        <div className="personal-info">
-          <p className="location">
-            <i className="fas fa-location-dot"></i>
-            Córdoba,Spain
-          </p>
-          <p className="email-dot">
-            <i className="fa-regular fa-envelope"></i>
-            nadsanp@gmail.com
-          </p>
-          <p className="linkedin-dot">
-            <i className="fa-brands fa-linkedin-in"></i>
-            <a
-              href="https://www.linkedin.com/in/tania-nadales-704208302/"
-              target="blank"
-              className="linkedin"
-            >
-              www.linkedin.com/in/tania-nadales
-            </a>
-          </p>
-          <p className="github-dot">
-            <i className="fa-brands fa-github"></i>
-            <a
-              href="https://github.com/Tania-nad"
-              target="blank"
-              className="github"
-            >
-              www.github.com/Tania-nad
-            </a>
-          </p>
-        </div>
-
         <form className="form">
           <label htmlFor="name">Nombre completo</label>
           <input
@@ -204,13 +159,47 @@ function Main({
             Submit
           </button>
         </form>
+
+        <h1 className="info-title">Wanna know more?</h1>
+        <p className="questions">Let´s get in touch! You can find me here:</p>
+        <div className="contact-info">
+          <p className="location">
+            <i className="fas fa-location-dot"></i>
+            Córdoba,Spain
+          </p>
+          <p className="email-dot">
+            <i className="fa-regular fa-envelope"></i>
+            nadsanp@gmail.com
+          </p>
+          <p className="linkedin-dot">
+            <i className="fa-brands fa-linkedin-in"></i>
+            <a
+              href="https://www.linkedin.com/in/tania-nadales-704208302/"
+              target="blank"
+              className="linkedin"
+            >
+              www.linkedin.com/in/tania-nadales
+            </a>
+          </p>
+          <p className="github-dot">
+            <i className="fa-brands fa-github"></i>
+            <a
+              href="https://github.com/Tania-nad"
+              target="blank"
+              className="github"
+            >
+              www.github.com/Tania-nad
+            </a>
+          </p>
+        </div>
+
         {showScrollToTop && (
           <button
             style={buttonStyle}
             onClick={scrollToTop}
             aria-label="Volver arriba"
           >
-            <i className="fa fa-arrow-up"></i> {/* Ícono de FontAwesome */}
+            <i className="fa fa-arrow-up"></i>
           </button>
         )}
       </section>
@@ -221,7 +210,7 @@ const buttonStyle = {
   position: "fixed",
   bottom: "20px",
   right: "20px",
-  backgroundColor: "#fc0dac",
+  backgroundColor: "#f78da7",
   color: "white",
   padding: "10px",
   borderRadius: "50%",
@@ -233,6 +222,8 @@ const buttonStyle = {
   alignItems: "center",
   justifyContent: "center",
   transition: "opacity 0.5s ease",
+  pointerEvents: "auto",
+  opacity: ".9",
 };
 
 Main.propTypes = {
@@ -241,8 +232,10 @@ Main.propTypes = {
   onChangeEmail: PropTypes.func.isRequired,
   onChangeTitle: PropTypes.func.isRequired,
   onChangeMessage: PropTypes.func.isRequired,
-  showScrollToTop: PropTypes.func.isRequired,
+  showScrollToTop: PropTypes.bool.isRequired,
   scrollToTop: PropTypes.func.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+  isFlipping: PropTypes.bool.isRequired,
 };
 
 export default Main;

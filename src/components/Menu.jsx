@@ -7,16 +7,16 @@ function Menu({ isOpen }) {
       <nav className={`nav-bar ${isOpen ? "open" : ""}`}>
         <ul>
           <li>
-            <a href="#sobre-mi">Sobre mi</a>
+            <a href="#sobre-mi">About me</a>
           </li>
           <li>
-            <a href="#proyectos">Proyectos</a>
+            <a href="#proyectos">Projects</a>
           </li>
           <li>
-            <a href="#habilidades">Habilidades</a>
+            <a href="#habilidades">Skills</a>
           </li>
           <li>
-            <a href="#mas-info">¿Más info?</a>
+            <a href="#mas-info">Contact</a>
           </li>
         </ul>
       </nav>

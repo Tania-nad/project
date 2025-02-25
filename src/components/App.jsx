@@ -2,10 +2,13 @@ import "../scss/App.scss";
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
-import { useState, useEffect } from "react";
+import image from "../images/PHOTO.jpg";
+import image2 from "../images/apple.jpg";
+import image3 from "../images/scrum.jpg";
+import image4 from "../images/veleta.jpg";
+import { useState, useEffect, useCallback } from "react";
 
 function App() {
-  const [menuVisible, setMenuVisible] = useState(false);
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [form, setForm] = useState({
@@ -14,6 +17,43 @@ function App() {
     title: "",
     message: "",
   });
+  //barra nav visible al hacer scroll down
+  const [color, setColor] = useState(false);
+  //estado para saber si las skills deben mostrarse
+  const [showSquares, setShowSquares] = useState(false);
+
+  const changeColor = () => {
+    if (window.scrollY >= 100) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+  window.addEventListener("scroll", changeColor);
+
+  const [imageUrl, setImageUrl] = useState(image);
+  const [isFlipping, setIsFlipping] = useState(false); // Para controlar el estado de la animación
+
+  // Función para cambiar la imagen aleatoriamente
+  const changeImage = useCallback(() => {
+    const imageUrls = [image2, image3, image4];
+
+    setIsFlipping(true); // Activa el flip
+    setTimeout(() => setIsFlipping(false), 1000); // Desactiva el flip después de 1 segundo (duración de la animación)
+
+    const randomIndex = Math.floor(Math.random() * imageUrls.length);
+    setImageUrl(imageUrls[randomIndex]);
+  }, []); // Ya no es necesario poner imageUrls como dependencia
+
+  // Efecto para cambiar la imagen cada 5 segundos
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      changeImage(); // Cambia la imagen automáticamente
+    }, 2000); // 2 segundos
+
+    return () => clearInterval(intervalId); // Limpiar el intervalo cuando se desmonte el componente
+  }, [changeImage]); // Ahora changeImage es una dependencia
+
   //botón de scroll hacia arriba
   const [showScrollToTop, setShowScrollToTop] = useState(false);
   useEffect(() => {
@@ -57,13 +97,10 @@ function App() {
     setForm({ ...form, message: value });
   };
 
-  const fullText = "Hi there! Soy Tania, fullstack developer.";
+  const fullText = "Hi there! I´m Tania, fullstack developer.";
 
   const handleClickInput = (valueInput) => {
     console.log(valueInput);
-  };
-  const toggleMenu = () => {
-    setMenuVisible(!menuVisible);
   };
 
   useEffect(() => {
@@ -77,25 +114,54 @@ function App() {
     }
   }, [index]); // Este efecto se ejecuta cada vez que el índice cambia
 
+  // Función que maneja el evento de scroll
+  const handleScroll = () => {
+    const section = document.getElementById("target-section");
+    const sectionPosition = section.getBoundingClientRect();
+
+    // Si la sección está visible en la ventana del navegador, mostramos los cuadrados
+    if (
+      sectionPosition.top <= window.innerHeight &&
+      sectionPosition.bottom >= 0
+    ) {
+      setShowSquares(true);
+    } else {
+      setShowSquares(false);
+    }
+  };
+
+  // Usamos useEffect para agregar y eliminar el listener de scroll
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    // Limpiar el listener cuando el componente se desmonte
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <Header
         onClickInput={handleClickInput}
-        menuVisible={menuVisible}
-        toggleMenu={toggleMenu}
         isOpen={isOpen}
         toggleMenuBurguer={toggleMenuBurguer}
+        color={color}
       />
-
-      <Main
-        text={text}
-        onChangeName={handleChangeName}
-        onChangeEmail={handleChangeEmail}
-        onChangeTitle={handleChangeTitle}
-        onChangeMessage={handleChangeMessage}
-        showScrollToTop={showScrollToTop}
-        scrollToTop={scrollToTop}
-      />
+      <main>
+        <Main
+          text={text}
+          onChangeName={handleChangeName}
+          onChangeEmail={handleChangeEmail}
+          onChangeTitle={handleChangeTitle}
+          onChangeMessage={handleChangeMessage}
+          showScrollToTop={showScrollToTop}
+          scrollToTop={scrollToTop}
+          imageUrl={imageUrl}
+          isFlipping={isFlipping}
+          showSquares={showSquares}
+        />
+      </main>
 
       <Footer />
     </>

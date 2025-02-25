@@ -1,0 +1,74 @@
+.location{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    justify-content: center;
+}
+.email-dot{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    justify-content: center;
+}
+.linkedin-dot{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    justify-content: center;
+}
+.linkedin{
+    text-decoration: none;
+    color: grey;
+}
+.linkedin:hover{
+    transform: scale(1.1); /* Aumenta el tamaño horizontal de la línea */
+    color: rgb(95, 13, 66); /* Cambia el color a blanco */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+.github-dot{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    justify-content: center;
+}
+.github{
+    text-decoration: none;
+    color: grey;
+}
+.github:hover{
+    transform: scale(1.1); /* Aumenta el tamaño horizontal de la línea */
+    color: rgb(95, 13, 66); /* Cambia el color a blanco */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    perspective: 1000px; /* Esto es necesario para un efecto de profundidad 3D */
+  }
+  
+  .flipping-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Hace la imagen redonda */
+    transition: transform 1s ease; /* La transición para hacer el flip */
+    will-change: transform; /* Mejora el rendimiento de la animación */
+  }
+  
+  .flipping-image.flip {
+    animation: flip 1s forwards; /* El efecto de flip dura 1 segundo */
+  }
+  
+  @keyframes flip {
+    0% {
+      transform: rotateY(0deg); /* Empieza en su posición inicial */
+    }
+    50% {
+      transform: rotateY(180deg); /* Da la vuelta a la mitad */
+    }
+    100% {
+      transform: rotateY(360deg); /* Completa el giro */
+    }
+  }
+  

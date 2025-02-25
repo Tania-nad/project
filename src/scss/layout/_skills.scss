@@ -1,0 +1,39 @@
+.skills{
+    width: 60%;
+    padding: 20px;
+    margin-top: 100px;
+    font-family: 'Roboto', arial, sans-serif;
+    color: grey;    
+    justify-content: center;
+    text-align: justify;
+}
+.skills-paragraph{
+    margin-top: 20px;
+    justify-content: space-between;
+    line-height: 1.6;
+}
+.skills-title{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.tech{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.tech a{
+    border: 2px solid #F56E28 ; 
+    padding: 5px; 
+    background-color: #F56E28 ; 
+    border-radius: 20px;
+    text-decoration: none;
+}
+.tech a:hover{
+    transform: scale(1.1); 
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}

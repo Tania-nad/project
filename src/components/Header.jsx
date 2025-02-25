@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import arrow from "../images/arrow.png";
 import Menu from "./Menu";
+import menu from "../images/menu.png";
 import "../scss/layout/_header.scss";
 import "../scss/core/_variables.scss";
 
@@ -9,67 +9,42 @@ import "../scss/core/_variables.scss";
     muestro el menú desplegable
 */
 
-function Header({ menuVisible, toggleMenu, isOpen, toggleMenuBurguer }) {
+function Header({ isOpen, toggleMenuBurguer, color }) {
   //código de JS puro
 
   return (
-    <header className="header">
+    <header className={color ? "header header-bg" : "header"}>
       <button className="burguer" onClick={toggleMenuBurguer}>
-        ☰
+        <img src={menu} alt="menu-burguer" className="burguer-image" />
       </button>
       <Menu isOpen={isOpen} />
-      <h1 className="visible-language">EN/ES</h1>
+
       <ul className="list">
         <div className="list-items">
           <a href="#sobre-mi">
-            <li className="list-elements">Sobre mi</li>
+            <li className="list-elements">About me</li>
           </a>
+
           <a href="#proyectos">
-            <li className="list-elements">Proyectos</li>
+            <li className="list-elements">Projects</li>
           </a>
           <a href="#habilidades">
-            <li className="list-elements">Habilidades</li>
+            <li className="list-elements">Skills</li>
           </a>
           <a href="#mas-info">
-            <li className="list-elements">¿Más info?</li>
+            <li className="list-elements">Contact</li>
           </a>
         </div>
       </ul>
-
-      <div className="flags">
-        {/* <img className="Spain" src={spainFlag} alt="Spain" />
-        <img className="England" src={englandFlag} alt="England" /> */}
-
-        <p className="language" onClick={toggleMenu}>
-          ES
-        </p>
-        <img
-          className="symbol"
-          src={arrow}
-          alt="drop-down"
-          onClick={toggleMenu}
-        />
-
-        {menuVisible && (
-          <ul className="lang-list">
-            <li className="lang-list">EN</li>
-            <li className="lang-list">ES</li>
-          </ul>
-        )}
-      </div>
     </header>
   );
 }
-Header.propTypes = {
-  onClickInput: PropTypes.func.isRequired,
-  menuInput: PropTypes.string.isRequired,
-};
 
 export default Header;
 
 Header.propTypes = {
-  menuVisible: PropTypes.bool.isRequired,
-  toggleMenu: PropTypes.func.isRequired,
+  onClickInput: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,
   toggleMenuBurguer: PropTypes.func.isRequired,
+  color: PropTypes.bool.isRequired,
 };

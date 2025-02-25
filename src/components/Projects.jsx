@@ -8,7 +8,7 @@ import Naruto from "../images/Naruto.png";
 function Projects() {
   return (
     <>
-      <h1 className="project-title">Proyectos</h1>
+      <h1 className="project-title">Some of my works</h1>
       <div className="container">
         <div>
           <h3 className="project-title-box">

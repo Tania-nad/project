@@ -5,7 +5,8 @@ function Footer() {
   return (
     <footer className="footer">
       <h3 className="footer-title">
-        Developed and designed by Tania Nadales &hearts; 2025{" "}
+        Developed and designed by Tania Nadales{" "}
+        <i className="fa-regular fa-copyright"></i> 2025{" "}
       </h3>
     </footer>
   );
