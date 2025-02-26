@@ -252,10 +252,10 @@
         justify-content: center;
     }
     .linkedin-dot{
-        display: flex;
-        padding: 20px;
-        gap: 20px;
+        padding: 15px;
         justify-content: center;
+        background-color: pink;
+        border-radius: 50%;
     }
     .linkedin{
         text-decoration: none;
@@ -268,9 +268,12 @@
     }
     .github-dot{
         display: flex;
-        padding: 20px;
+        padding: 15px;
+        background-color: pink;
+        border-radius: 50%;
         gap: 20px;
         justify-content: center;
+
     }
     .github{
         text-decoration: none;
@@ -294,6 +297,39 @@
         text-align: center;
         
     }
+    .complete-contact-info{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        gap: 50px;
+    }
+    .networks{
+        display: flex;
+        gap: 20px;
+    }
+    .lines{
+       color: #0e172c; 
+       margin-top: 10px;
+       
+    }
+    .arrow {
+        font-size: 30px; /* Tamaño de la flecha */
+        display: inline-block;
+        animation: heartbeat 1s ease-in-out infinite; /* Llama a la animación 'heartbeat' que dura 1 segundo y se repite infinitamente */
+      }
+      
+      @keyframes heartbeat {
+        0% {
+          transform: scale(1); /* Estado inicial (normal) */
+        }
+        50% {
+          transform: scale(1.2); /* Se agranda un 20% en el medio de la animación */
+        }
+        100% {
+          transform: scale(1); /* Vuelve al tamaño original */
+        }
+      }
+   
   
   @keyframes flip {
     0% {
@@ -309,6 +345,10 @@
 
   @media (max-width: 768px) {
     .tech{
+        display: flex;
+        flex-direction: column;
+    }
+    .complete-contact-info{
         display: flex;
         flex-direction: column;
     }

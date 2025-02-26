@@ -161,41 +161,43 @@ function Main({
           </button>
         </form>
 
-        <h1 className="info-title">Wanna know more?</h1>
-        <p className="questions">Let´s get in touch! You can find me here:</p>
-        <div className="contact-info">
-          <p className="location">
-            <i className="fas fa-location-dot"></i>
-            Córdoba,Spain
-          </p>
-          <p className="email-dot">
-            <i className="fa-regular fa-envelope"></i>
-            nadsanp@gmail.com
-          </p>
-          <p className="linkedin-dot">
-            <i className="fa-brands fa-linkedin-in"></i>
-            <a
-              href="https://www.linkedin.com/in/tania-nadales-704208302/"
-              target="blank"
-              className="linkedin"
-            >
-              www.linkedin.com/in/tania-nadales
-            </a>
-          </p>
-          <p className="github-dot">
-            <i className="fa-brands fa-github"></i>
-            <a
-              href="https://github.com/Tania-nad"
-              target="blank"
-              className="github"
-            >
-              www.github.com/Tania-nad
-            </a>
-          </p>
-        </div>
-        <div>
-          <ContactForm />
-        </div>
+        <h1 className="info-title">Contact</h1>
+        <p className="questions">Let´s get in touch!</p>
+        <section className="complete-contact-info">
+          <div className="contact-info">
+            <h1>You can either find me here:</h1>
+            <p className="email-dot">
+              <i className="fa-regular fa-envelope"></i>
+              nadsanp@gmail.com
+            </p>
+            <div className="networks">
+              <p className="linkedin-dot">
+                <a
+                  href="https://www.linkedin.com/in/tania-nadales-704208302/"
+                  target="blank"
+                  className="linkedin"
+                >
+                  <i className="fa-brands fa-linkedin-in"></i>
+                </a>
+              </p>
+              <p className="github-dot">
+                <a
+                  href="https://github.com/Tania-nad"
+                  target="blank"
+                  className="github"
+                >
+                  <i className="fa-brands fa-github"></i>
+                </a>
+              </p>
+            </div>
+            <h1 className="lines">Or drop some lines at:</h1>
+            <i className="fa-solid fa-arrow-right arrow"></i>
+          </div>
+
+          <div>
+            <ContactForm />
+          </div>
+        </section>
 
         {showScrollToTop && (
           <button

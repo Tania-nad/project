@@ -1,0 +1,52 @@
+.my-form-class{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 5%;
+    background-color: rgb(74, 61, 61);
+    margin-top: 50px;
+    
+}
+.submit-button{
+    width: 40%;
+    display: block; 
+    padding: 5px;
+    margin: 20px auto;
+    border-radius: 5px;
+    font-family: 'Roboto', arial, sans-serif;
+    cursor: pointer;
+    background-color: rgb(237, 135, 222);
+}
+.email-input{
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;  
+    
+}
+.message-input{
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    padding: 20px;
+}
+.name-input{
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;  
+}
+@media (max-width: 768px) {
+    .my-form-class{
+        margin-top: 10px;
+    }
+    .message-input{
+        width: 100%;
+    }
+    .email-input{
+        width: 100%;
+    }
+    .name-input{
+        width: 100%;
+    }
+}
