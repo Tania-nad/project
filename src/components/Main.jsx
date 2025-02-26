@@ -1,6 +1,7 @@
 import "../scss/layout/_main.scss";
 import Projects from "./Projects";
 import PropTypes from "prop-types";
+import ContactForm from "./ContactForm";
 
 function Main({
   text,
@@ -191,6 +192,9 @@ function Main({
               www.github.com/Tania-nad
             </a>
           </p>
+        </div>
+        <div>
+          <ContactForm />
         </div>
 
         {showScrollToTop && (
