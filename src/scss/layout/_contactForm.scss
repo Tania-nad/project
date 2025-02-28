@@ -22,7 +22,8 @@
 .email-input{
     width: 300px;
     border: 1px solid #ccc;
-    border-radius: 5px;  
+    border-radius: 5px; 
+    padding: 5px; 
     
 }
 .message-input{
@@ -35,6 +36,7 @@
     width: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;  
+    padding: 5px; 
 }
 @media (max-width: 768px) {
     .my-form-class{

@@ -163,7 +163,6 @@
 .info{
     width: 60%;
     padding: 20px;
-    margin-top: 100px;
     margin-bottom: 100px;
     font-family: 'Roboto', arial, sans-serif;
     color: grey;    
@@ -312,11 +311,19 @@
        margin-top: 10px;
        
     }
+    .questions{
+        color: #0e172c;
+    }
     .arrow {
         font-size: 30px; /* Tamaño de la flecha */
         display: inline-block;
+        margin-top: 10px;
+        color: #0e172c;
         animation: heartbeat 1s ease-in-out infinite; /* Llama a la animación 'heartbeat' que dura 1 segundo y se repite infinitamente */
       }
+    .info-intro{
+        text-align: center;
+    }
       
       @keyframes heartbeat {
         0% {

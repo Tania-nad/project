@@ -45,7 +45,7 @@ function Main({
       </section>
 
       <section id="sobre-mi" className="about-me">
-        <h1 className="about-me-title">Tania...Who?</h1>
+        <h1 className="about-me-title">About me</h1>
         <p className="about-me-parag">
           Welcome to my page. My name is Tania and I am a full stack web
           developer passionate about new learnings, challenges that may come my
@@ -160,9 +160,12 @@ function Main({
             Submit
           </button>
         </form>
+        <div className="info-intro">
+          <h1 className="info-title">Contact</h1>
+          <p className="questions">Let´s get in touch!</p>
+          <i className="fa-solid fa-comments arrow"></i>
+        </div>
 
-        <h1 className="info-title">Contact</h1>
-        <p className="questions">Let´s get in touch!</p>
         <section className="complete-contact-info">
           <div className="contact-info">
             <h1>You can either find me here:</h1>
@@ -190,8 +193,10 @@ function Main({
                 </a>
               </p>
             </div>
-            <h1 className="lines">Or drop some lines at:</h1>
-            <i className="fa-solid fa-arrow-right arrow"></i>
+            <h1 className="lines">
+              Or you can drop some lines. Make sure you type your name and email
+              so I can contact you back.
+            </h1>
           </div>
 
           <div>
