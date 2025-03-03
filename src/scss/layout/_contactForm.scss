@@ -15,7 +15,7 @@
     padding: 5px;
     margin: 20px auto;
     border-radius: 5px;
-    font-family: 'Roboto', arial, sans-serif;
+    font-family: "Open Sans", serif ;
     cursor: pointer;
     background-color: rgb(237, 135, 222);
 }
@@ -24,6 +24,7 @@
     border: 1px solid #ccc;
     border-radius: 5px; 
     padding: 5px; 
+    font-family: "Open Sans", serif ;
     
 }
 .message-input{
@@ -31,12 +32,14 @@
     border: 1px solid #ccc;
     border-radius: 5px; 
     padding: 20px;
+    font-family: "Open Sans", serif ;
 }
 .name-input{
     width: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;  
     padding: 5px; 
+    font-family: "Open Sans", serif ;
 }
 @media (max-width: 768px) {
     .my-form-class{

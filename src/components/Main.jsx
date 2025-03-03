@@ -2,6 +2,10 @@ import "../scss/layout/_main.scss";
 import Projects from "./Projects";
 import PropTypes from "prop-types";
 import ContactForm from "./ContactForm";
+import MovingTitles from "./MovingTitles";
+import wordpress from "../images/wordpress.webp";
+import python from "../images/python.webp";
+import cyber from "../images/cybersecurity.webp";
 
 function Main({
   text,
@@ -36,12 +40,13 @@ function Main({
       <section className="Hi">
         <h1>{text}</h1>
       </section>
-      <section>
+      <section className="landing-section">
         <img
           src={imageUrl}
           alt="Imagen Giratoria"
           className={`flipping-image ${isFlipping ? "flip" : ""}`}
         />
+        <MovingTitles />
       </section>
 
       <section id="sobre-mi" className="about-me">
@@ -59,8 +64,12 @@ function Main({
           my home country to study, work, and hope for the best. In the search
           for new challenges, I fell headfirst into the world of technology and
           fell in love with programming and its many possibilities. I started
-          with my school, Adalab, and have continued learning and developing new
-          languages on my own. Have I kept your attention so far? Scroll down ;)
+          with my school,{" "}
+          <a className="adalab-link" href="https://adalab.es/" target="blank">
+            Adalab
+          </a>
+          , and have continued learning and developing new languages on my own.
+          Have I kept your attention so far? Scroll down ;)
         </p>
       </section>
       <section id="proyectos" className="projects-section">
@@ -73,7 +82,7 @@ function Main({
           <div className="tech">
             <div className={`squared-box left ${showSquares ? "show" : ""}`}>
               <div className="tech-skills-section">
-                <h1>Technical skills</h1>
+                <h1 className="tech-skills-title">Technical skills</h1>
                 <ul className="tech-list">
                   <li>
                     <i className="fa-solid fa-circle-check"></i>HTML5
@@ -114,10 +123,37 @@ function Main({
                     management
                   </li>
                   <li>
-                    <i className="fa-solid fa-circle-check"></i>Organization and
-                    commitment
+                    <i className="fa-solid fa-circle-check"></i>Organization
                   </li>
                 </ul>
+              </div>
+            </div>
+          </div>
+          <div className="also-learning">
+            <h1>Also learning...</h1>
+            <div className="also-learning-squares">
+              <div className="wordpress-section">
+                <h2>Practical Wordpress</h2>
+                <h3>Platzi</h3>
+                <img
+                  className="wordpress"
+                  src={wordpress}
+                  alt="wordpress platzi course"
+                />
+              </div>
+              <div className="python-section">
+                <h2>Fundamental Python</h2>
+                <h3>Platzi</h3>
+                <img
+                  className="python"
+                  src={python}
+                  alt="python platzi course"
+                />
+              </div>
+              <div className="cyber-section">
+                <h2>Cybersecurity Certificate</h2>
+                <h3>Google/Coursera</h3>
+                <img className="cyber" src={cyber} alt="cybersecurity course" />
               </div>
             </div>
           </div>

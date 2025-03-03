@@ -2,7 +2,7 @@
     width: 60%;
     padding: 20px;
     margin-top: 100px;
-    font-family: 'Roboto', arial, sans-serif;
+    font-family: "Open Sans", serif;
     color: grey;    
     justify-content: center;
     text-align: justify;
@@ -11,11 +11,13 @@
     margin-top: 20px;
     justify-content: space-between;
     line-height: 1.6;
+    font-family: "Open Sans", serif;
 }
 .skills-title{
     display: flex;
     justify-content: center;
     padding: 10px;
+    font-family: "Open Sans", serif;
 }
 .tech{
     margin-top: 40px;
@@ -23,6 +25,7 @@
     flex-wrap: wrap;
     gap: 40px;
     justify-content: center;
+    font-family: "Open Sans", serif;
 }
 
 .tech a{
@@ -31,9 +34,16 @@
     background-color: #F56E28 ; 
     border-radius: 20px;
     text-decoration: none;
+    font-family: "Open Sans", serif;
 }
 .tech a:hover{
     transform: scale(1.1); 
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
+}
+.tech-skills-title{
+    font-family: "Open Sans", serif;
+}
+ul li{
+    font-family: "Open Sans", serif;
 }

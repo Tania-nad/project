@@ -15,28 +15,38 @@
 .Hi{
     font-family: 'Roboto', arial, sans-serif;
     color: grey;
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 50px;
     font-size: xx-large;
+}
+.landing-section{
+    display: flex;
 }
 .about-me{
     width: 60%;
     padding: 20px;
-    margin-top: 100px;
+    margin-top: 150px;
     font-family: 'Roboto', arial, sans-serif;
     color: grey;
     text-align: justify;
+    
    
 }
 .about-me-title{
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 10px; 
+    font-family: "Open Sans", serif;   
 }
 .about-me-parag{
     margin-top: 20px;
     justify-content: space-between;
     line-height: 1.6;
+    font-family: "Open Sans", serif;
+}
+.adalab-link{
+    text-decoration: none;
+    color: rgb(244, 110, 132);
 }
 .projects-section{
     margin-top: 200px;
@@ -46,11 +56,12 @@
     justify-content: center;
     padding: 10px;
     color: grey;
+    font-family: "Open Sans", serif;
 }
 .skills{
     padding: 20px;
     margin-top: 200px;
-    font-family: 'Roboto', arial, sans-serif;
+    font-family: "Open Sans", serif;
     color: grey;  
     justify-content: center;
     text-align: justify;
@@ -59,14 +70,13 @@
 .target-section{
     background-color: lightgray;
     padding: 20px;
-    
-
 }
 
 .skills-title{
     display: flex;
     justify-content: center;
     padding: 10px;
+    font-family: "Open Sans", serif;
 }
 .tech{
     position: relative;
@@ -100,12 +110,12 @@
   }
 .tech-skills-section{
     padding: 20px;
-    font-family: 'Roboto', arial, sans-serif;
+    font-family: "Open Sans", serif;
     
 }
 .soft-skills-section{
     padding: 20px;
-    font-family: 'Roboto', arial, sans-serif;
+    font-family: "Open Sans", serif;
 }
 .tech-list{
     padding: 10px;
@@ -145,7 +155,59 @@
     transition: transform 0.1s ease-in-out, color 0.2s ease-in-out;
     cursor: pointer;
 }
-
+.also-learning{
+    margin-top: 5px;
+    margin-bottom: 50px;
+    
+    
+}
+.also-learning-squares{
+    padding: 20px;
+    gap: 20px;
+    display: flex;   
+    flex-direction: column;
+    align-items: center;
+    font-family: "Open Sans", serif;
+    
+}
+.wordpress{
+    width: 70px;
+    height: 70px;
+    
+}
+.wordpress-section{
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    width: 50%;
+    border-style: solid;
+    border-radius: 5px;
+    
+}
+.python{
+    width: 70px;
+    height: 70px;
+}
+.python-section{
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    width: 50%;
+    border-style: solid;
+    border-radius: 5px;
+}
+.cyber{
+    width: 70px;
+    height: 70px;
+}
+.cyber-section{
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    width: 50%;
+    border-style: solid;
+    border-radius: 5px;
+}
 .tech a{
     border: 2px solid #F56E28 ; 
     padding: 5px; 
@@ -164,7 +226,7 @@
     width: 60%;
     padding: 20px;
     margin-bottom: 100px;
-    font-family: 'Roboto', arial, sans-serif;
+    font-family: "Open Sans", serif ;
     color: grey;    
     justify-content: center;
     text-align: justify;
@@ -173,6 +235,7 @@
     display: flex;
     justify-content: center;
     padding: 10px;
+    font-family: "Open Sans", serif ;
 }
 .info-paragraph{
     margin-top: 20px;
@@ -226,7 +289,7 @@
     perspective: 1000px; /* Esto es necesario para un efecto de profundidad 3D */
   }
   
-  .flipping-image {
+.flipping-image {
     width: 200px;
     height: 200px;
     border-radius: 50%; /* Hace la imagen redonda */
@@ -234,38 +297,38 @@
     will-change: transform; /* Mejora el rendimiento de la animación */
   }
   
-  .flipping-image.flip {
+.flipping-image.flip {
     animation: flip 1s forwards; /* El efecto de flip dura 1 segundo */
   }
 
-  .location{
+.location{
     display: flex;
     padding: 20px;
     gap: 20px;
     justify-content: center;
     }
-    .email-dot{
+.email-dot{
         display: flex;
         padding: 20px;
         gap: 20px;
         justify-content: center;
     }
-    .linkedin-dot{
+.linkedin-dot{
         padding: 15px;
         justify-content: center;
         background-color: pink;
         border-radius: 50%;
     }
-    .linkedin{
+.linkedin{
         text-decoration: none;
         color: #0e172c;
     }
-    .linkedin:hover{
+.linkedin:hover{
         transform: scale(1.1); /* Aumenta el tamaño horizontal de la línea */
         color: rgb(95, 13, 66); /* Cambia el color a blanco */
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
     }
-    .github-dot{
+.github-dot{
         display: flex;
         padding: 15px;
         background-color: pink;
@@ -274,16 +337,16 @@
         justify-content: center;
 
     }
-    .github{
+.github{
         text-decoration: none;
         color: #0e172c;
     }
-    .github:hover{
+.github:hover{
         transform: scale(1.1); /* Aumenta el tamaño horizontal de la línea */
         color: rgb(95, 13, 66); /* Cambia el color a blanco */
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
     }
-    .contact-info{
+.contact-info{
         margin-top: 50px;
         margin-bottom: 50px;
         width: 100%;
@@ -294,34 +357,39 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+        font-family: "Open Sans", serif ;
+        
         
     }
-    .complete-contact-info{
+.complete-contact-info{
         display: flex;
         justify-content: center;
         margin-top: 50px;
         gap: 50px;
+        font-family: "Open Sans", serif ;
     }
-    .networks{
+.networks{
         display: flex;
         gap: 20px;
     }
-    .lines{
+.lines{
        color: #0e172c; 
        margin-top: 10px;
+       font-family: "Open Sans", serif ;
        
     }
-    .questions{
+.questions{
         color: #0e172c;
+        font-family: "Open Sans", serif ;
     }
-    .arrow {
+.arrow {
         font-size: 30px; /* Tamaño de la flecha */
         display: inline-block;
         margin-top: 10px;
         color: #0e172c;
         animation: heartbeat 1s ease-in-out infinite; /* Llama a la animación 'heartbeat' que dura 1 segundo y se repite infinitamente */
       }
-    .info-intro{
+.info-intro{
         text-align: center;
     }
       
@@ -358,6 +426,26 @@
     .complete-contact-info{
         display: flex;
         flex-direction: column;
+    }
+    .landing-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .landing-section{
+        align-items: center;
+    }
+    .wordpress-section{
+        width: 80%;
+    }
+    .python-section{
+        width: 80%;
+    }
+    .also-learning-squares{
+        display: flex;
+        flex-direction: column;
+    }
+    .cyber-section{
+        width: 80%;
     }
   }
 
