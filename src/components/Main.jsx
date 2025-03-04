@@ -283,6 +283,7 @@ Main.propTypes = {
   scrollToTop: PropTypes.func.isRequired,
   imageUrl: PropTypes.string.isRequired,
   isFlipping: PropTypes.bool.isRequired,
+  showSquares: PropTypes.bool.isRequired,
 };
 
 export default Main;

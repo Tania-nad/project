@@ -3,9 +3,9 @@ import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 import image from "../images/PHOTO.jpg";
-import image2 from "../images/apple.jpg";
-import image3 from "../images/scrum.jpg";
-import image4 from "../images/veleta.jpg";
+import image2 from "../images/ME1.webp";
+import image3 from "../images/veleta.jpg";
+import image4 from "../images/scrum.jpg";
 import { useState, useEffect, useCallback } from "react";
 
 function App() {

@@ -1,18 +1,25 @@
 import "../scss/layout/_projects.scss";
 import Brains from "../images/BrilliantBrains.png";
 import Infinito from "../images/Infinito.png";
-import Animals from "../images/techAnimals.png";
 import Morty from "../images/Rick&Morty.png";
 import Naruto from "../images/Naruto.png";
 
 function Projects() {
   return (
     <>
-      <h1 className="project-title">Some of my works</h1>
+      <h1 className="project-title">
+        Some of the works I´ve been involved in...
+      </h1>
       <div className="container">
         <div>
           <h3 className="project-title-box">
-            Brilliant Brains (proyecto grupal)🔗
+            <a
+              href="https://tania-nad.github.io/project-promo-a-module-3-team-3/"
+              className="project-title-box"
+              target="blank"
+            >
+              Brilliant Brains (proyecto grupal)🔗
+            </a>
           </h3>
           <div>
             <img
@@ -23,7 +30,16 @@ function Projects() {
           </div>
         </div>
         <div>
-          <h3 className="project-title-box">Hasta el infinito (grupal)🔗</h3>
+          <h3 className="project-title-box">
+            <a
+              href="https://nuria8890.github.io/ADALAB-project-module-2-team-3-HastaElInfinito/"
+              className="project-title-box"
+              target="blank"
+            >
+              Hasta el infinito (proyecto grupal)🔗
+            </a>
+          </h3>
+
           <div>
             <img
               className="container-image"
@@ -32,18 +48,28 @@ function Projects() {
             />
           </div>
         </div>
-        <div>
-          <h3 className="project-title-box">TechAnimals (grupal)🔗</h3>
-          <img className="container-image" src={Animals} alt="TechAnimals" />
-        </div>
         <div className="second-row">
           <div className="project-4">
-            <h3 className="project-title-box">Rick&Morty🔗</h3>
+            <h3 className="project-title-box">
+              <a
+                href="https://beta.adalab.es/modulo-3-evaluacion-final-Tania-nad/"
+                className="project-title-box"
+                target="blank"
+              >
+                Rick&Morty🔗
+              </a>
+            </h3>
             <img className="container-image" src={Morty} alt="Rick and Morty" />
           </div>
           <div className="project-5">
             <h3 className="project-title-box">
-              Buscador de series de anime 🔗
+              <a
+                href="http://127.0.0.1:5501/index.html"
+                className="project-title-box"
+                target="blank"
+              >
+                Buscador de series de anime 🔗
+              </a>
             </h3>
             <img className="container-image" src={Naruto} alt="Anime Series" />
           </div>
