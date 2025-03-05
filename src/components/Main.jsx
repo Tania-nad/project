@@ -6,6 +6,11 @@ import MovingTitles from "./MovingTitles";
 import wordpress from "../images/wordpress.webp";
 import python from "../images/python.webp";
 import cyber from "../images/cybersecurity.webp";
+import arrow from "../images/arrow-up.png";
+import dialog from "../images/dialog.png";
+import linkedin from "../images/linkedin2.png";
+import github from "../images/github2.png";
+import mail from "../images/email5.png";
 
 function Main({
   text,
@@ -199,14 +204,14 @@ function Main({
         <div className="info-intro">
           <h1 className="info-title">Contact</h1>
           <p className="questions">Let´s get in touch!</p>
-          <i className="fa-solid fa-comments arrow"></i>
+          <img src={dialog} className="arrow" alt="contact symbol" />
         </div>
 
         <section className="complete-contact-info">
           <div className="contact-info">
             <h1>You can either find me here:</h1>
             <p className="email-dot">
-              <i className="fa-regular fa-envelope"></i>
+              <img className="email" src={mail} alt="email" />
               nadsanp@gmail.com
             </p>
             <div className="networks">
@@ -216,7 +221,7 @@ function Main({
                   target="blank"
                   className="linkedin"
                 >
-                  <i className="fa-brands fa-linkedin-in"></i>
+                  <img src={linkedin} className="linkedin" alt="linkedin" />
                 </a>
               </p>
               <p className="github-dot">
@@ -225,7 +230,7 @@ function Main({
                   target="blank"
                   className="github"
                 >
-                  <i className="fa-brands fa-github"></i>
+                  <img src={github} alt="github" className="github" />
                 </a>
               </p>
             </div>
@@ -246,7 +251,7 @@ function Main({
             onClick={scrollToTop}
             aria-label="Volver arriba"
           >
-            <i className="fa fa-arrow-up"></i>
+            <img className="arrow-up" src={arrow} alt="scroll up" />
           </button>
         )}
       </section>

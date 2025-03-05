@@ -23,7 +23,7 @@
     display: flex;
 }
 .about-me{
-    width: 60%;
+    width: 80%;
     padding: 20px;
     margin-top: 150px;
     font-family: 'Roboto', arial, sans-serif;
@@ -325,22 +325,23 @@
     gap: 20px;
     justify-content: center;
     }
+.linkedin{
+    width:30px;
+    height: 30px;
+}
 .email-dot{
         display: flex;
-        padding: 20px;
-        gap: 20px;
+        padding: 10px;
         justify-content: center;
+        align-items: center;
+        
     }
-.linkedin-dot{
-        padding: 15px;
-        justify-content: center;
-        background-color: pink;
-        border-radius: 50%;
-    }
-.linkedin{
-        text-decoration: none;
-        color: #0e172c;
-    }
+.email{
+    width: 50px;
+    height: 40px;
+}
+
+
 .linkedin:hover{
         transform: scale(1.1); /* Aumenta el tamaño horizontal de la línea */
         color: rgb(95, 13, 66); /* Cambia el color a blanco */
@@ -348,16 +349,15 @@
     }
 .github-dot{
         display: flex;
-        padding: 15px;
-        background-color: pink;
         border-radius: 50%;
         gap: 20px;
         justify-content: center;
 
     }
 .github{
-        text-decoration: none;
-        color: #0e172c;
+    width:30px;
+    height: 30px;
+    
     }
 .github:hover{
         transform: scale(1.1); /* Aumenta el tamaño horizontal de la línea */
@@ -401,12 +401,17 @@
         font-family: "Open Sans", serif ;
     }
 .arrow {
-        font-size: 30px; /* Tamaño de la flecha */
+        width: 40px;
+        height: 40px;
         display: inline-block;
         margin-top: 10px;
         color: #0e172c;
         animation: heartbeat 1s ease-in-out infinite; /* Llama a la animación 'heartbeat' que dura 1 segundo y se repite infinitamente */
       }
+.arrow-up{
+    width: 30px;
+    height: 30px;
+}
 .info-intro{
         text-align: center;
     }
@@ -437,6 +442,7 @@
   }
 
   @media (max-width: 768px) {
+   
     .tech{
         display: flex;
         flex-direction: column;
@@ -464,6 +470,11 @@
     }
     .cyber-section{
         width: 80%;
+    }
+    .email-dot{
+        display: flex;
+        flex-direction: column;
+        
     }
   }
 
