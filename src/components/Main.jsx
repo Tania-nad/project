@@ -56,11 +56,11 @@ function Main({
           developer passionate about new learnings, challenges that may come my
           way, and an adventurer in all aspects of life. My motto is: the harder
           it gets, the more I push myself and obsess over achieving it (wait, is
-          that a good thing?). I didn’t get here by chance. My academic and
+          that a good thing?). I did not get here by chance. My academic and
           professional background is quite broad. It all started with a passion
           for languages and different cultures, which led me not only to study
           Translation and Interpreting (I could easily pictured myself at the UN
-          translating Kofi Annan's speeches at the age of 16), but also to leave
+          translating Kofi Annan speeches at the age of 16), but also to leave
           my home country to study, work, and hope for the best. In the search
           for new challenges, I fell headfirst into the world of technology and
           fell in love with programming and its many possibilities. I started
