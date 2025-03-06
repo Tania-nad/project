@@ -16,8 +16,10 @@
     margin: 20px auto;
     border-radius: 5px;
     font-family: "Open Sans", serif ;
+    font-size: 80%;
     cursor: pointer;
     background-color: rgb(237, 135, 222);
+    
 }
 .email-input{
     width: 300px;
@@ -41,9 +43,15 @@
     padding: 5px; 
     font-family: "Open Sans", serif ;
 }
-@media (max-width: 768px) {
+@media (max-width: 740px) {
     .my-form-class{
         margin-top: 10px;
+        width: 300px;
+        margin-left: -25px;
+        
+       
+        
+        
     }
     .message-input{
         width: 100%;

@@ -235,8 +235,8 @@ function Main({
               </p>
             </div>
             <h1 className="lines">
-              Or you can drop some lines. Make sure you type your name and email
-              so I can contact you back.
+              Or feel free to leave a message. Please include your name and
+              email and I will get back to you as soon as possible.
             </h1>
           </div>
 
