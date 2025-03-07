@@ -240,7 +240,7 @@ function Main({
             </h1>
           </div>
 
-          <div>
+          <div className="form-container">
             <ContactForm />
           </div>
         </section>

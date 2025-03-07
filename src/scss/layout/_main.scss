@@ -415,6 +415,7 @@
 .info-intro{
         text-align: center;
     }
+
       
       @keyframes heartbeat {
         0% {
@@ -475,6 +476,13 @@
         display: flex;
         flex-direction: column;
         
+    }
+    .form-container{
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        justify-content: center;
+        align-items: center;
     }
   }
 
